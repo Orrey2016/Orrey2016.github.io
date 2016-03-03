@@ -81,7 +81,10 @@ a, a:hover, a:focus, a:active, a.active {
 }
 
 section {
-    padding: 70px 0;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /*--------------------
@@ -89,7 +92,7 @@ section {
 --------------------*/
 
 .navbar-default {
-	background-color: #222;
+	background-color: #d9534f;
 	border-color: transparent
 }
 .navbar-default .navbar-brand {
@@ -98,20 +101,20 @@ section {
     padding: 0px;
 }
 .navbar-default .navbar-brand:hover,.navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:active,.navbar-default .navbar-brand.active {
-	color: #fec503
+	color: #FFF
 }
 .navbar-default .navbar-collapse {
 	border-color: rgba(255,255,255,.02)
 }
 .navbar-default .navbar-toggle {
-	background-color: #fed136;
-	border-color: #fed136
+	background-color: #FFF;
+	border-color: #FFF;
 }
 .navbar-default .navbar-toggle .icon-bar {
-	background-color: #fff
+	background-color: #d9534f
 }
 .navbar-default .navbar-toggle:hover,.navbar-default .navbar-toggle:focus {
-	background-color: #fed136
+	background-color: #FFF;
 }
 .navbar-default .nav li a {
 	font-family: "Roboto",sans-serif;
@@ -121,18 +124,18 @@ section {
 	color:#fff
 }
 .navbar-default .nav li a:hover,.navbar-default .nav li a:focus {
-	color: #fed136;
+	color: #FFF;
 	outline: 0
 }
 
 .navbar-default .navbar-nav>.active>a {
 	border-radius: 0;
 	color: #fff;
-	background-color: #fed136
+	background-color: #FFF;
 }
 .navbar-default .navbar-nav>.active>a:hover,.navbar-default .navbar-nav>.active>a:focus {
 	color: #fff;
-	background-color: #fec503
+	background-color: #FFF;
 }
 
 @media (min-width:768px) {
@@ -149,7 +152,7 @@ section {
 		font-size: 2em;
 		-webkit-transition:all .3s;
 		-moz-transition:all .3s;
-		transition:all .3s
+		transition:all .3s;
 	}
 	.navbar-default .navbar-nav>.active>a {
 		border-radius: 3px
@@ -185,7 +188,7 @@ header .intro-text {
     padding-bottom: 50px;
 }
 
-@media (min-width: 768px) {
+@media (min-width : 768px) {
 	header .intro-text {
 	    padding-top: 300px;
 	    padding-bottom: 200px;
@@ -226,6 +229,33 @@ header .intro-text .intro-heading {
 	    line-height: 75px;
 	    margin-bottom: 50px;
 	}
+}
+
+@media only  screen 
+and (min-width : 320px)
+and (max-width : 480px) {
+    
+    header .intro-text {
+	    padding-top: 300px;
+	    padding-bottom: 200px;
+	}
+    
+    header .intro-text .intro-lead-in {
+	    font-family: "Playfair Display",sans-serif;
+	    font-style: italic;
+	    font-size: 40px;
+	    line-height: 40px;
+	    margin-bottom: 25px;
+	}
+    
+    header .intro-text .intro-heading {
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    font-size: 75px;
+	    line-height: 75px;
+	    margin-bottom: 50px;
+	}
+    
 }
 
 /*--------------------
@@ -348,12 +378,24 @@ figure {
     float: left;
     overflow: hidden;
     margin: 10px 1%;
-/*    min-width: 320px;
+    min-width: 320px;
     max-width: 480px;
-    max-height: 360px; */
+    min-height: 250px;
+    max-height: 360px; 
     background: #726FB9;
     text-align: center;
-    cursor: pointer;	
+    cursor: pointer;
+    display:table;
+    padding: 0;
+}
+
+@media only screen
+and (min-width : 320px)
+and (max-width : 480px) {
+    
+    figure {
+        margin:10px 0.09%;
+    }
 }
 
 figcaption {
@@ -380,8 +422,27 @@ figcaption {
 }
 
 figure.effect-bubba {
-	background: #000;
+	/*background: #000;*/
 	margin-bottom: 30px;
+}
+
+figure.effect-bubba.color1 {
+    background:  #f44336;
+}
+figure.effect-bubba.color2 {
+    background:  #e91e63;
+}
+figure.effect-bubba.color3 {
+    background:  #9c27b0;
+}
+figure.effect-bubba.color4 {
+    background:  #673ab7;
+}
+figure.effect-bubba.color5 {
+    background:  #009688;
+}
+figure.effect-bubba.color6 {
+    background:  #4caf50;
 }
 
 figure.effect-bubba img {
@@ -457,6 +518,12 @@ figure.effect-bubba:hover p {
 	opacity: 1;
 	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
+}
+
+figure h3 {
+    color: white;
+    height: 250px;
+    display:table-cell; vertical-align: middle;
 }
 
 /*--------------------
@@ -785,6 +852,16 @@ font-size: 11px;
     font-size: 28px;
 }
 
+.brand_image {
+    height: 50px;
+}
+
+.countdown_title {
+    color:white;
+    font-family:fantasy;
+}
+
+
 @media only screen
 and (min-width : 320px)
 and (max-width : 480px) {
@@ -801,4 +878,16 @@ and (max-width : 480px) {
     margin-top: 7px;
     font-size: 20px;
 }
+.brand_image {
+    height: 40px;
+    padding-left: 5px;
+    padding-top: 5px;
+}
+    
+.event_color {
+    background-color: black;
+    height: 250px;
+    width: 250px;
+}
+    
 }
